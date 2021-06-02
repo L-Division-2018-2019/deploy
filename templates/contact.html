@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{%block title%}Contact{% endblock title %}
+
+
+
+{%block body%}
+<div class="container-fluid px-0 mb-3">
+    
+</div>
+<div class="container">
+{% csrf_token %}
+    <h1 class="text-center"> Form </h3>
+    <form method="post" action="/contact">
+    <div class="mb-3">
+        <label for="jobrole" class="form-label">Job Role</label>
+        <input type="text" class="form-control" id="jobrole" name="jobrole" placeholder="Enter Job Role">
+    </div>
+
+    <div class="mb-3">
+        <label for="quali" class="form-label">Qualification</label>
+        <input type="text" class="form-control" id="quali" name="quali"placeholder="Enter your Qualification">
+    </div>
+
+    <div class="mb-3">
+        <label for="speci" class="form-label">Specialisation</label>
+        <input type="text" class="form-control" id="speci" name="speci" placeholder="Enter your Specification">
+    </div>
+
+    <div class="mb-3">
+        <label for="loca" class="form-label">Location</label>
+        <input type="text" class="form-control" id="loca" name="loca" placeholder="Enter your Location">
+    </div>
+
+    <div class="mb-3">
+        <label for="sal" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="sal" name="sal" placeholder="Enter above mentioned salary">
+    </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+
+
+
+{% endblock body %}
